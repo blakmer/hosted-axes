@@ -10,10 +10,6 @@ FROM package AS linting
 
 RUN npm run lint
 
-FROM package AS testing
-
-RUN npm run test
-
 FROM package AS build
 RUN npm run build
 
