@@ -3,7 +3,7 @@ FROM node:20.18-alpine AS package
 WORKDIR /app
 
 ADD package.json package-lock.json ./
-RUN npm i
+RUN npm i --force
 ADD . .
 
 FROM package AS linting
