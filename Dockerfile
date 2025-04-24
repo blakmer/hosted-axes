@@ -2,8 +2,8 @@ FROM node:20.18-alpine AS package
 
 WORKDIR /app
 
-COPY package.json package-lock.json ./
-RUN npm i --force
+COPY package.json ./
+RUN npm ci
 COPY . .
 
 FROM package AS linting
