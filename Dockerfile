@@ -16,5 +16,5 @@ RUN npm run build
 FROM nginx:1.27.4 AS nginx
 
 COPY --from=build /app/dist /usr/share/nginx/html
-COPY ./config/nginx/default.con /etc/nginx/conf.d/default.conf
+COPY ./config/nginx/default.conf /etc/nginx/conf.d/default.conf
 
