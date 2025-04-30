@@ -2,7 +2,6 @@ FROM node:20.18-alpine AS package
 
 WORKDIR /app
 
-COPY package.json ./
 RUN npm ci
 COPY . .
 
